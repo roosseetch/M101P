@@ -1,7 +1,6 @@
 
 import pymongo
 
-
 c = pymongo.MongoClient(host="mongodb://localhost:27017",
                         w=1, j=True)
 
@@ -14,8 +13,3 @@ print("inserting")
 people.insert({"name":"Richard Krueter", "favorite_color":"red"})
 print("inserting")
 people.insert({"name":"Dwight Merriman", "favorite_color":"green"})
-
-
-
-
-

@@ -17,8 +17,3 @@ print("inserting")
 people.insert({"name":"Richard Krueter", "favorite_color":"red"})
 print("inserting")
 people.insert({"name":"Dwight Merriman", "favorite_color":"green"})
-
-
-
-
-
