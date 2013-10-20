@@ -15,7 +15,7 @@ grades = db.grades
 # lets do an update that we believe will hit shard 0
 print("updating a document on shard 0")
 try:
-    grades.update({"student_id":699053},{'$push':{'scores':{'type':'homework','score':100}}},multi=False)
+    grades.update({"student_id": 699053},{'$push': {'scores': {'type': 'homework','score': 100}}},multi=False)
 except:
     print("Unexpected error:", sys.exc_info()[0])
 print("completed the update")
@@ -27,8 +27,3 @@ try:
 except:
     print "Unexpected error:", sys.exc_info()[0]
 print("completed the update")
-
-
-
-
-
