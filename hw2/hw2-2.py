@@ -7,7 +7,7 @@ from bson.objectid import ObjectId
 connection = pymongo.MongoClient("mongodb://localhost", safe=True)
 
 # get a handle to the school database
-db=connection.students
+db = connection.students
 grades = db.grades
 
 
@@ -23,7 +23,7 @@ def remove_bad_homework():
 
 	query = {'type': 'homework'}
 
-	ids =[]
+	ids = []
 	for i in range(num_students):
 		try:
 			query['student_id'] = i
@@ -34,7 +34,7 @@ def remove_bad_homework():
 			print("Unexpected error:", sys.exc_info()[0])
 
 	for id in ids:
-		grades.remove({"_id":ObjectId(id)})
+		grades.remove({"_id": ObjectId(id)})
 
 remove_bad_homework()
 
