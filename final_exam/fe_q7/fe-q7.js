@@ -26,3 +26,5 @@ function reduce(key, values) {
 
 db.images.find().forEach(filter);
 db.images.mapReduce(map, reduce, {out: {inline: 1}});
+
+// Another Solution, without removing
